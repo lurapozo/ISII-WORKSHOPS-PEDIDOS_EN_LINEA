@@ -5,7 +5,7 @@ public class CarInsurance {
 	protected char gender;
 	protected boolean married;
 	
-	protected int basePremiun = 500;
+	protected int basePremium = 500;
 	
 	private int premiumCalculator(boolean validLicense) {
 		if(validLicense == false) {
@@ -25,4 +25,33 @@ public class CarInsurance {
 		}
 		return this.basePremium;
 	}
+	public void setAge(int newAge) {
+		this.age = newAge;
+	}
+	public void setGender(char newGender) {
+		this.gender = newGender;
+	}
+	public void setMarried(boolean newMarried) {
+		this.married = newMarried;
+	}
+	public void setBasePremium(int newBase) {
+		this.basePremium = newBase;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	public char getGender() {
+		return gender;
+	}
+	public boolean getMarried{
+		return married;
+	}
+	public int getBasePremium{
+		return basePremium;
+	}
+	public int getPremiumCalculator(boolean tarjeta) {
+		return this.calcularPremium(tarjeta);
+	}
+	
 }
