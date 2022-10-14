@@ -20,7 +20,7 @@ public class CarInsurance {
 		if(this.gender=='M' && this.married==false && this.age < 25) {
 			this.basePremium=this.basePremium+1500;
 		}
-		if(45 <this.age < 65) {
+		if(45 < this.age && this.age < 65) {
 			this.basePremium=this.basePremium-100;
 		}
 		return this.basePremium;
@@ -44,14 +44,14 @@ public class CarInsurance {
 	public char getGender() {
 		return gender;
 	}
-	public boolean getMarried{
+	public boolean getMarried() {
 		return married;
 	}
-	public int getBasePremium{
+	public int getBasePremium(){
 		return basePremium;
 	}
 	public int getPremiumCalculator(boolean tarjeta) {
-		return this.calcularPremium(tarjeta);
+		return this.premiumCalculator(tarjeta);
 	}
 	
 }
