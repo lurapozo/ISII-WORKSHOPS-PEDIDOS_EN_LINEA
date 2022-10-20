@@ -33,7 +33,6 @@ public class CarInsurance { //CarInsurance class
 	public void setBasePremium(int newBase) {
 		this.basePremium = newBase;
 	}
-	
 	public int getAge() {
 		return age;
 	}
