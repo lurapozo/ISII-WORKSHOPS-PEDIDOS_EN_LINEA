@@ -1,23 +1,19 @@
 package ec.edu.espol.workshops;
 
-public class CarInsurance {
+public class CarInsurance { //CarInsurance class
 	protected int age;
 	protected char gender;
 	protected boolean married;
-	
 	protected int basePremium = 500;
 	
 	private int premiumCalculator(boolean validLicense) {
-		if(validLicense == false) {
+		if(!validLicense || this.age > 80) {
 			return -1;
 		}
-		if(this.age > 80) {
-			return -1;
-		}
-		if (this.gender== 'F' || this.married == true) {
+		if (this.gender== 'F' || this.married) {
 			this.basePremium=this.basePremium-200;
 		}
-		if(this.gender=='M' && this.married==false && this.age < 25) {
+		if(this.gender=='M' && !this.married && this.age < 25) {
 			this.basePremium=this.basePremium+1500;
 		}
 		if(45 < this.age && this.age < 65) {
@@ -37,7 +33,6 @@ public class CarInsurance {
 	public void setBasePremium(int newBase) {
 		this.basePremium = newBase;
 	}
-	
 	public int getAge() {
 		return age;
 	}
