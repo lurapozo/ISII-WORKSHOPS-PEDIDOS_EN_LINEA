@@ -63,4 +63,5 @@ public class CarInsurance {
   public int getPremiumCalculator(boolean tarjeta) {
     return this.premiumCalculator(tarjeta);
   }
+  
 }
