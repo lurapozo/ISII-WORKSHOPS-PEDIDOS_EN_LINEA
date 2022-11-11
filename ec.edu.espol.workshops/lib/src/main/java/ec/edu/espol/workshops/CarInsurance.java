@@ -13,7 +13,7 @@ public class CarInsurance {
     if (this.age > 80) {
       return -1;
     }
-    if(this.age <= 0) {
+    if(this.age <= 18) {
     	return -1;
     }
     if (this.gender == 'F' || this.married == true) {
