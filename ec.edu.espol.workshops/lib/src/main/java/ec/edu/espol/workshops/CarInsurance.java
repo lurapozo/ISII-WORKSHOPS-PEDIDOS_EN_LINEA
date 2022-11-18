@@ -16,6 +16,9 @@ public class CarInsurance {
     if(this.age <= 18) {
     	return -1;
     }
+    if(this.basePremium < 0) {
+      return -1;
+    }
     if (this.gender == 'F' || this.married == true) {
       this.basePremium = this.basePremium - 200;
     }
