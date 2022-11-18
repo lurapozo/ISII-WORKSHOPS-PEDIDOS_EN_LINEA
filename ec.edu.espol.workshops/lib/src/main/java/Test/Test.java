@@ -9,31 +9,31 @@ public class Test {
 		boolean license;
 		//TC1
 		Prueba.setBasePremium(500);
-		Prueba.setAge(20);
+		Prueba.setAge(17);
 		Prueba.setGender('M');
 		Prueba.setMarried(false);
 		license=true;
-		System.out.println("Prueba TC1 esperado: 2000   obtenido: " + Prueba.premiumCalculator(license));
+		System.out.println("Prueba TC1 esperado: -1   obtenido: " + Prueba.premiumCalculator(license));
 		
 		//TC2
 		Prueba.setBasePremium(500);
-		Prueba.setAge(50);
-		Prueba.setGender('F');
-		Prueba.setMarried(true);
+		Prueba.setAge(18);
+		Prueba.setGender('M');
+		Prueba.setMarried(false);
 		license=true;
-		System.out.println("Prueba TC2 esperado: 200   obtenido: " + Prueba.premiumCalculator(license));
+		System.out.println("Prueba TC2 esperado: -1   obtenido: " + Prueba.premiumCalculator(license));
 		
 		//TC3
 		Prueba.setBasePremium(500);
-		Prueba.setAge(50);
-		Prueba.setGender('F');
-		Prueba.setMarried(true);
-		license=false;
-		System.out.println("Prueba TC3 esperado: -1   obtenido: " + Prueba.premiumCalculator(license));
+		Prueba.setAge(19);
+		Prueba.setGender('M');
+		Prueba.setMarried(false);
+		license=true;
+		System.out.println("Prueba TC3 esperado: 2000   obtenido: " + Prueba.premiumCalculator(license));
 
 		//TC4
 		Prueba.setBasePremium(500);
-		Prueba.setAge(70);
+		Prueba.setAge(80);
 		Prueba.setGender('M');
 		Prueba.setMarried(false);
 		license=true;
@@ -41,19 +41,43 @@ public class Test {
 
 		//TC5
 		Prueba.setBasePremium(500);
-		Prueba.setAge(16);
+		Prueba.setAge(79);
 		Prueba.setGender('M');
 		Prueba.setMarried(false);
 		license=true;
-		System.out.println("Prueba TC5 esperado: -1   obtenido: " + Prueba.premiumCalculator(license));
+		System.out.println("Prueba TC5 esperado: 500   obtenido: " + Prueba.premiumCalculator(license));
 		
 		//TC6
 		Prueba.setBasePremium(500);
-		Prueba.setAge(100);
+		Prueba.setAge(81);
 		Prueba.setGender('M');
 		Prueba.setMarried(false);
 		license=true;
 		System.out.println("Prueba TC6 esperado: -1   obtenido: " + Prueba.premiumCalculator(license));
+		
+		//TC7
+		Prueba.setBasePremium(0);
+		Prueba.setAge(20);
+		Prueba.setGender('M');
+		Prueba.setMarried(false);
+		license=true;
+		System.out.println("Prueba TC7 esperado: 1500   obtenido: " + Prueba.premiumCalculator(license));
+		
+		//TC8
+		Prueba.setBasePremium(-1);
+		Prueba.setAge(20);
+		Prueba.setGender('M');
+		Prueba.setMarried(false);
+		license=true;
+		System.out.println("Prueba TC8 esperado: -1   obtenido: " + Prueba.premiumCalculator(license));
+		
+		//TC9
+		Prueba.setBasePremium(1);
+		Prueba.setAge(20);
+		Prueba.setGender('M');
+		Prueba.setMarried(false);
+		license=true;
+		System.out.println("Prueba TC9 esperado: 1501   obtenido: " + Prueba.premiumCalculator(license));
 	}
 	
 }
