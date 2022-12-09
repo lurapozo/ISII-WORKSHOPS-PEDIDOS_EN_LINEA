@@ -4,7 +4,7 @@ public class CarInsurance {
   protected int age;
   protected char gender;
   protected boolean married;
-  protected int basePremium = 600;
+  protected int basePremium = 500;
   
   private int premiumCalculator(boolean validLicense) {
     if (validLicense == false) {
