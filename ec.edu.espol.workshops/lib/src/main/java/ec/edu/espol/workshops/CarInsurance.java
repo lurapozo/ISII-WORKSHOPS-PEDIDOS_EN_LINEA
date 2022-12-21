@@ -7,14 +7,8 @@ public class CarInsurance {
   protected int basePremium = 500;
   
   private int premiumCalculator(boolean validLicense) {
-    if (validLicense == false) {
+    if (validLicense == false || this.age > 80 || this.age <= 0) {
       return -1;
-    }
-    if (this.age > 80) {
-      return -1;
-    }
-    if(this.age <= 0) {
-    	return -1;
     }
     if (this.gender == 'F' || this.married == true) {
       this.basePremium = this.basePremium - 200;
