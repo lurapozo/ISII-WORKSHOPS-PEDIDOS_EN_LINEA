@@ -53,5 +53,23 @@ class PathCoverageTest {
 	   prueba5.setGender('M');
 	   prueba5.setMarried(false);
 	   assertEquals(400,prueba5.getPremiumCalculator(true));
+	   
+	   CarInsurance prueba6 = new CarInsurance();
+	   prueba6.setAge(30);
+	   prueba6.setGender('M');
+	   prueba6.setMarried(false);
+	   assertEquals(-1,prueba6.getPremiumCalculator(false));
+	   
+	   CarInsurance prueba7 = new CarInsurance();
+	   prueba7.setAge(-1);
+	   prueba7.setGender('M');
+	   prueba7.setMarried(false);
+	   assertEquals(-1,prueba7.getPremiumCalculator(true));
+	   
+		CarInsurance prueba8 = new CarInsurance();
+		prueba8.setAge(70);
+		prueba8.setGender('M');
+		prueba8.setMarried(true);
+		assertEquals(300,prueba8.getPremiumCalculator(true));
    }
 }
