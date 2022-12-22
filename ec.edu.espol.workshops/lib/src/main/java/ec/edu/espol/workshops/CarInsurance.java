@@ -34,25 +34,6 @@ public class CarInsurance {
     this.married = newMarried;
   }
 
-  public void setBasePremium(int newBase) {
-    this.basePremium = newBase;
-  }
-
-  public int getAge() {
-    return age;
-  }
- 
-  public char getGender() {
-    return gender;
-  }
-
-  public boolean getMarried() {
-    return married;
-  }
-
-  public int getBasePremium() {
-    return basePremium;
-  }
 
   public int getPremiumCalculator(boolean tarjeta) {
     return this.premiumCalculator(tarjeta);
