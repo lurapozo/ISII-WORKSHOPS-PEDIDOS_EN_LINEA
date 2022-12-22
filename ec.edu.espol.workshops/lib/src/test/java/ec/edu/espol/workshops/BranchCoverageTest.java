@@ -1,13 +1,23 @@
-import org.junit.Test;
+package ec.edu.espol.workshops;
 
-import ec.edu.espol.workshops.CarInsurance;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-public class BranchCoverageTest {
-   @Test
+class BranchCoverageTest {
 
-   public void testAdd() {
+	@BeforeEach
+	void setUp() throws Exception {
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+	}
+
+	@Test
+	void testPremiumCalculator() {
 	   CarInsurance prueba1 = new CarInsurance();
 	   prueba1.setAge(90);
 	   prueba1.setGender('M');

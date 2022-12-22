@@ -1,12 +1,23 @@
 package ec.edu.espol.workshops;
-import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class StatementCoverageTest {
-   @Test
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-   public void testAdd() {
+class StatementCoverageTest {
+
+	@BeforeEach
+	void setUp() throws Exception {
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+	}
+
+	@Test
+	void testPremiumCalculator() {
 	   //System.out.println ("Prueba 1");
 	   CarInsurance Prueba = new CarInsurance();
 	   Prueba.setAge(90);

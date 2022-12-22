@@ -6,7 +6,7 @@ public class CarInsurance {
   protected boolean married;
   protected int basePremium = 500;
   
-  private int premiumCalculator(boolean validLicense) {
+  public int premiumCalculator(boolean validLicense) {
     if (validLicense == false || this.age > 80 || this.age <= 0) {
       return -1;
     }
