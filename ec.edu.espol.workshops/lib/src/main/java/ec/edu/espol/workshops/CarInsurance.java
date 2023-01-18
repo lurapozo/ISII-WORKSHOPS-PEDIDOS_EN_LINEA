@@ -5,7 +5,7 @@ public class CarInsurance {
   protected char gender;
   protected boolean married;
   protected int basePremium = 500;
-  
+
   private int premiumCalculator(boolean validLicense) {
     if (validLicense == false) {
       return -1;
@@ -14,7 +14,7 @@ public class CarInsurance {
       return -1;
     }
     if(this.age <= 0) {
-    	return -1;
+        return -1;
     }
     if (this.gender == 'F' || this.married == true) {
       this.basePremium = this.basePremium - 200;
@@ -22,16 +22,25 @@ public class CarInsurance {
     if (this.gender == 'M' && this.married == false && this.age < 25) {
       this.basePremium = this.basePremium + 1500;
     }
+
+    if ( this.married == true && this.age <= 30 && this.age >= 60) {
+        this.basePremium = this.basePremium - 50;
+      }
+
+    if (this.gender == 'F' && this.married == false && this.age < 60) {
+        this.basePremium = this.basePremium + 50;
+      }
+
     if (45 < this.age && this.age < 65) {
       this.basePremium = this.basePremium - 100;
     }
     return this.basePremium;
   }
-  
+
   public void setAge(int newAge) {
     this.age = newAge;
   }
-  
+
   public void setGender(char newGender) {
     this.gender = newGender;
   }
