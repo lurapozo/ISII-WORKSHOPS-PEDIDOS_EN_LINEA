@@ -23,11 +23,11 @@ public class CarInsurance {
       this.basePremium = this.basePremium + 1500;
     }
 
-    if ( this.married == true && this.age <= 30 && this.age >= 60) {
+    if ( this.married == true && this.age >= 30 && this.age <= 60) {
         this.basePremium = this.basePremium - 50;
       }
 
-    if (this.gender == 'F' && this.married == false && this.age < 60) {
+    if (this.gender == 'F' && this.married == false && this.age > 60) {
         this.basePremium = this.basePremium + 50;
       }
 
